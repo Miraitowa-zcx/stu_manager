@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/doc/com/dao/package-frame.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/dao/StuClassDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/dao/StudentDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/dao/UserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/model/StuClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/model/Student.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/model/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/StringUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/view/MainFrm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/view/StudentAddFrm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/view/StudentManageFrm.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/view/logOnFrm.java" charset="UTF-8" />
+  </component>
+</project>
