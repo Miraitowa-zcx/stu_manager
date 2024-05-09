@@ -24,14 +24,30 @@ import java.util.Objects;
  */
 public class logOnFrm extends JFrame {
 
+    /**
+     * 用户名文本框
+     */
     private final JTextField userNameTxt;
+
+    /**
+     * 密码文本框
+     */
     private final JPasswordField passwordTxt;
 
+    /**
+     * 数据库工具类
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 用户 Dao
+     */
     private final UserDao userDao = new UserDao();
 
     /**
      * 启动应用程序
+     *
+     * @param args 命令行参数
      */
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
@@ -142,7 +158,6 @@ public class logOnFrm extends JFrame {
         );
         contentPane.setLayout(loginLayout);
 
-        //设置JFrame居中显示
         this.setLocationRelativeTo(null);
     }
 

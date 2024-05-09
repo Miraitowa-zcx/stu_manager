@@ -18,23 +18,62 @@ import java.sql.ResultSet;
 import java.util.Objects;
 
 /**
- * 添加学生
+ * 添加学生界面
  *
  * @author <a href=mailto:2038322151@qq0=.com>Miraitowa_zcx</a>
  * @version 1.0.0
  * @since 2024/04/28
  */
 public class StudentAddFrm extends JInternalFrame {
+
+    /**
+     * 学生添加界面
+     */
     private final JTextField stuNameTxt;
+
+    /**
+     * 家庭地址文本框
+     */
     private final JTextField homeAddressTxt;
+
+    /**
+     * 学生年级文本框
+     */
     private final JTextField stuGradeTxt;
+
+    /**
+     * 学生班级下拉框
+     */
     private final JComboBox<StuClass> stuClassComboBox;
+
+    /**
+     * 学生描述文本域
+     */
     private final JTextArea stuDescTxt;
+
+    /**
+     * 学生性别单选按钮 - 男
+     */
     private final JRadioButton manJrb;
+
+    /**
+     * 学生性别单选按钮 - 女
+     */
     private final JRadioButton femaleJrb;
 
+    /**
+     * 数据库工具类对象
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 学生班级数据访问对象
+     */
     private final StuClassDao stuClassDao = new StuClassDao();
+
+    /**
+     * 学生数据访问对象
+     */
     private final StudentDao studentDao = new StudentDao();
 
     /**

@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="" />
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第一次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/StuClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/StuClassDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/StudentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/StuClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StuClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/StuGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StuGrade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/AboutAuthorFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AboutAuthorFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/MainFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/MainFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuGradeAddFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuGradeManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StudentAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StudentAddFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/StudentManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StudentManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/view/logOnFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/logOnFrm.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +31,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Miraitowa-zcx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:Miraitowa-zcx/stu_manager.git&quot;,
+    &quot;accountId&quot;: &quot;c2bef184-c74b-4ba1-8e3c-a38cc4a25845&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -23,46 +53,47 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.logOnFrm.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "true",
-    "JAR 应用程序.lombok-1.18.30.jar.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/CodesProject/Java/stu-manager",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true",
-    "应用程序.JavaFrm.executor": "Run",
-    "应用程序.MainFrm.executor": "Run",
-    "应用程序.logOnFrm.executor": "Run"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.logOnFrm.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
+    &quot;JAR 应用程序.lombok-1.18.30.jar.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;stu__manager&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/CodesProject/Java/stu-manager&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
+    &quot;应用程序.JavaFrm.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.MainFrm.executor&quot;: &quot;Run&quot;,
+    &quot;应用程序.logOnFrm.executor&quot;: &quot;Run&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\CodesProject\Java\stu-manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\CodesProject\Java\stu-manager\sql" />
       <recent name="D:\CodesProject\Java\stu-manager\photo\photo" />
       <recent name="D:\CodesProject\Java\stu-manager\icon\icon" />
       <recent name="D:\CodesProject\Java\stu-manager\assets\images" />
@@ -148,8 +179,18 @@
       <workItem from="1715059678150" duration="15829000" />
       <workItem from="1715084918988" duration="1727000" />
       <workItem from="1715143981586" duration="9364000" />
-      <workItem from="1715173491991" duration="201000" />
+      <workItem from="1715173491991" duration="360000" />
+      <workItem from="1715229179355" duration="2265000" />
     </task>
+    <task id="LOCAL-00001" summary="第一次提交">
+      <option name="closed" value="true" />
+      <created>1715173779293</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715173779293</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,5 +206,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="第一次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
   </component>
 </project>

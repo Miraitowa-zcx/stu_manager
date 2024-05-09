@@ -20,6 +20,8 @@ public class AboutAuthorFrm extends JInternalFrame {
 
     /**
      * 启动应用程序
+     *
+     * @param args 命令行参数
      */
     public static void main(String[] args) {
 

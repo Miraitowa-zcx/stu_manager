@@ -31,22 +31,79 @@ import java.util.Vector;
  */
 public class StudentManageFrm extends JInternalFrame {
 
+    /**
+     * 学生表格
+     */
     private final JTable stuTable;
+
+    /**
+     * 搜索学生姓名文本框
+     */
     private final JTextField searchStudentNameTxt;
+
+    /**
+     * 搜索家庭地址文本框
+     */
     private final JTextField searchHomeAddressTxt;
+
+    /**
+     * 搜索学生班级下拉框
+     */
     private final JComboBox<StuClass> searchStudentClassJcb;
+
+    /**
+     * 搜索学生性别单选按钮 - 男
+     */
     private final JRadioButton manJrb;
+
+    /**
+     * 搜索学生性别单选按钮 - 女
+     */
     private final JRadioButton femaleJrb;
+
+    /**
+     * 学生描述文本域
+     */
     private final JTextArea stuDescTxt;
+
+    /**
+     * 学生班级下拉框
+     */
     private final JComboBox<StuClass> stuClassJcb;
 
+    /**
+     * 学号文本框
+     */
     private final JTextField schoolDegreeTxt;
+
+    /**
+     * 学生姓名文本框
+     */
     private final JTextField stuNameTxt;
+
+    /**
+     * 学生成绩文本框
+     */
     private final JTextField stuGradeTxt;
+
+    /**
+     * 家庭住址文本框
+     */
     private final JTextField homeAddressTxt;
 
+    /**
+     * 数据库工具类
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 学生班级数据访问对象
+     */
     private final StuClassDao stuClassDao = new StuClassDao();
+
+    /**
+     * 学生数据访问对象
+     */
     private final StudentDao studentDao = new StudentDao();
 
     /**

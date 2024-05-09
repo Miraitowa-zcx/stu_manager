@@ -30,20 +30,69 @@ import java.util.Vector;
  */
 public class StuGradeManageFrm extends JInternalFrame {
 
+    /**
+     * 学生表格
+     */
     private final JTable stuTable;
+
+    /**
+     * 搜索学生姓名文本框
+     */
     private final JTextField searchStudentNameTxt;
+
+    /**
+     * 搜索学生班级下拉框
+     */
     private final JComboBox<StuClass> searchStudentClassJcb;
+
+    /**
+     * 搜索学生班级下拉框
+     */
     private final JComboBox<StuClass> stuClassJcb;
 
+    /**
+     * 学号文本框
+     */
     private final JTextField schoolDegreeTxt;
+
+    /**
+     * 学生姓名文本框
+     */
     private final JTextField stuNameTxt;
+
+    /**
+     * 语文成绩文本框
+     */
     private final JTextField chineseScoreText;
+
+    /**
+     * 数学成绩文本框
+     */
     private final JTextField mathScoreText;
+
+    /**
+     * 英语成绩文本框
+     */
     private final JTextField englishScoreText;
+
+    /**
+     * 搜索学号文本框
+     */
     private final JTextField searchNumberTxt;
 
+    /**
+     * 数据库工具类对象
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 学生班级对象
+     */
     private final StuClassDao stuClassDao = new StuClassDao();
+
+    /**
+     * 学生成绩对象
+     */
     private final StuGradeDao stuGradeDao = new StuGradeDao();
 
     /**

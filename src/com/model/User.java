@@ -14,13 +14,33 @@ import lombok.Setter;
 @Getter
 public class User {
 
+    /**
+     * 用户 ID
+     */
     private int id;
+
+    /**
+     * 用户名
+     */
     private String userName;
+
+    /**
+     * 密码
+     */
     private String password;
 
+    /**
+     * 构造方法
+     */
     public User() {
     }
 
+    /**
+     * 构造方法
+     *
+     * @param userName 用户名
+     * @param password 密码
+     */
     public User(String userName, String password) {
         this.userName = userName;
         this.password = password;

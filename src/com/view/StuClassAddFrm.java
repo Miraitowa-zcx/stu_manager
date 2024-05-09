@@ -22,14 +22,30 @@ import java.util.Objects;
  */
 public class StuClassAddFrm extends JInternalFrame {
 
+    /**
+     * 学生班级名称文本框
+     */
     private final JTextField stuClassNameTxt;
+
+    /**
+     * 学生班级描述文本域
+     */
     private final JTextArea stuClassDescTxt;
 
+    /**
+     * 数据库工具类
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 学生班级数据访问对象
+     */
     private final StuClassDao bookTypeDao = new StuClassDao();
 
     /**
      * 启动应用程序
+     *
+     * @param args 命令行参数
      */
     public static void main(String[] args) {
 
@@ -109,7 +125,6 @@ public class StuClassAddFrm extends JInternalFrame {
         );
         getContentPane().setLayout(stuClassAddFrmLayout);
 
-        //设置文本域边框
         stuClassDescTxt.setBorder(new LineBorder(new java.awt.Color(127, 157, 185), 1, false));
     }
 

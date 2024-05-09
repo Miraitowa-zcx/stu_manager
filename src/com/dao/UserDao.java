@@ -24,7 +24,6 @@ public class UserDao {
      * @throws Exception 异常
      */
     public User login(Connection connection, User user) throws Exception {
-
         User resultUser = null;
         String sql = "select * from t_user where userName=? and password=?";
         PreparedStatement preparedStatement = connection.prepareStatement(sql);

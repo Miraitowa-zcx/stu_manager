@@ -15,6 +15,7 @@ import java.sql.ResultSet;
  * @since 2024/04/28
  */
 public class StuClassDao {
+
     /**
      * 学生班级添加
      *

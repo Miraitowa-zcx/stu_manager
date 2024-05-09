@@ -31,15 +31,49 @@ import java.util.stream.Collectors;
  */
 public class StuGradeAddFrm extends JInternalFrame {
 
+    /**
+     * 学生名称组合框
+     */
     private final JComboBox<Student> stuNameJcb;
+
+    /**
+     * 语文成绩文本框
+     */
     private final JTextField chineseScoreText;
+
+    /**
+     * 数学成绩文本框
+     */
     private final JTextField mathScoreText;
+
+    /**
+     * 英语成绩文本框
+     */
     private final JTextField englishScoreText;
+
+    /**
+     * 学生班级组合框
+     */
     private final JComboBox<StuClass> StuClassJcb;
 
+    /**
+     * 数据库工具类
+     */
     private final DbUtil dbUtil = new DbUtil();
+
+    /**
+     * 学生成绩数据访问对象
+     */
     private final StudentDao studentDao = new StudentDao();
+
+    /**
+     * 学生班级数据访问对象
+     */
     private final StuClassDao bookTypeDao = new StuClassDao();
+
+    /**
+     * 学生成绩数据访问对象
+     */
     private final StuGradeDao stuGradeDao = new StuGradeDao();
 
     /**
@@ -48,6 +82,7 @@ public class StuGradeAddFrm extends JInternalFrame {
      * @param args 命令行参数
      */
     public static void main(String[] args) {
+
         EventQueue.invokeLater(() -> {
             try {
                 StuGradeAddFrm stuGradeAddFrm = new StuGradeAddFrm();
