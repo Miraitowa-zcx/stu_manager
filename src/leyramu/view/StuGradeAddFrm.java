@@ -1,13 +1,13 @@
-package com.view;
+package leyramu.view;
 
-import com.dao.StuClassDao;
-import com.dao.StuGradeDao;
-import com.dao.StudentDao;
-import com.model.StuClass;
-import com.model.StuGrade;
-import com.model.Student;
-import com.util.DbUtil;
-import com.util.StringUtil;
+import leyramu.dao.StuClassDao;
+import leyramu.dao.StuGradeDao;
+import leyramu.dao.StudentDao;
+import leyramu.model.StuClass;
+import leyramu.model.StuGrade;
+import leyramu.model.Student;
+import leyramu.util.DbUtil;
+import leyramu.util.StringUtil;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

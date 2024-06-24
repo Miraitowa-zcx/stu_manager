@@ -1,4 +1,4 @@
-package com.util;
+package leyramu.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

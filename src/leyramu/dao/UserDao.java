@@ -1,10 +1,10 @@
-package com.dao;
+package leyramu.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import com.model.User;
+import leyramu.model.User;
 
 /**
  * 用户 Dao 类

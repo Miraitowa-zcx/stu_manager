@@ -1,4 +1,4 @@
-package com.util;
+package leyramu.util;
 
 /**
  * ×Ö·û´®¹¤¾ßÀà

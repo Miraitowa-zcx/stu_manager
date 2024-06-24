@@ -1,4 +1,4 @@
-package com.view;
+package leyramu.view;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

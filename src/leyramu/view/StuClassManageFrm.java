@@ -1,10 +1,10 @@
-package com.view;
+package leyramu.view;
 
-import com.dao.StuClassDao;
-import com.dao.StudentDao;
-import com.model.StuClass;
-import com.util.DbUtil;
-import com.util.StringUtil;
+import leyramu.dao.StuClassDao;
+import leyramu.dao.StudentDao;
+import leyramu.model.StuClass;
+import leyramu.util.DbUtil;
+import leyramu.util.StringUtil;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

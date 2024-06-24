@@ -1,16 +1,15 @@
-package com.view;
+package leyramu.view;
 
-import com.dao.StuClassDao;
-import com.dao.StudentDao;
-import com.model.StuClass;
-import com.model.Student;
-import com.util.DbUtil;
-import com.util.StringUtil;
+import leyramu.dao.StuClassDao;
+import leyramu.dao.StuGradeDao;
+import leyramu.model.StuClass;
+import leyramu.model.StuGrade;
+import leyramu.util.DbUtil;
+import leyramu.util.StringUtil;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
-import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -23,13 +22,13 @@ import java.util.Objects;
 import java.util.Vector;
 
 /**
- * 学生管理界面
+ * 学生成绩管理界面
  *
  * @author <a href=mailto:2038322151@qq0=.com>Miraitowa_zcx</a>
  * @version 1.0.0
  * @since 2024/04/28
  */
-public class StudentManageFrm extends JInternalFrame {
+public class StuGradeManageFrm extends JInternalFrame {
 
     /**
      * 学生表格
@@ -42,32 +41,12 @@ public class StudentManageFrm extends JInternalFrame {
     private final JTextField searchStudentNameTxt;
 
     /**
-     * 搜索家庭地址文本框
-     */
-    private final JTextField searchHomeAddressTxt;
-
-    /**
      * 搜索学生班级下拉框
      */
     private final JComboBox<StuClass> searchStudentClassJcb;
 
     /**
-     * 搜索学生性别单选按钮 - 男
-     */
-    private final JRadioButton manJrb;
-
-    /**
-     * 搜索学生性别单选按钮 - 女
-     */
-    private final JRadioButton femaleJrb;
-
-    /**
-     * 学生描述文本域
-     */
-    private final JTextArea stuDescTxt;
-
-    /**
-     * 学生班级下拉框
+     * 搜索学生班级下拉框
      */
     private final JComboBox<StuClass> stuClassJcb;
 
@@ -82,29 +61,39 @@ public class StudentManageFrm extends JInternalFrame {
     private final JTextField stuNameTxt;
 
     /**
-     * 学生成绩文本框
+     * 语文成绩文本框
      */
-    private final JTextField stuGradeTxt;
+    private final JTextField chineseScoreText;
 
     /**
-     * 家庭住址文本框
+     * 数学成绩文本框
      */
-    private final JTextField homeAddressTxt;
+    private final JTextField mathScoreText;
 
     /**
-     * 数据库工具类
+     * 英语成绩文本框
+     */
+    private final JTextField englishScoreText;
+
+    /**
+     * 搜索学号文本框
+     */
+    private final JTextField searchNumberTxt;
+
+    /**
+     * 数据库工具类对象
      */
     private final DbUtil dbUtil = new DbUtil();
 
     /**
-     * 学生班级数据访问对象
+     * 学生班级对象
      */
     private final StuClassDao stuClassDao = new StuClassDao();
 
     /**
-     * 学生数据访问对象
+     * 学生成绩对象
      */
-    private final StudentDao studentDao = new StudentDao();
+    private final StuGradeDao stuGradeDao = new StuGradeDao();
 
     /**
      * 启动应用程序
@@ -126,14 +115,14 @@ public class StudentManageFrm extends JInternalFrame {
     /**
      * 创建框架
      */
-    public StudentManageFrm() {
+    public StuGradeManageFrm() {
         setFrameIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/icon/setting.png"))));
         setIconifiable(true);
         setClosable(true);
-        setTitle("学生管理");
+        setTitle("学生成绩管理");
         setBounds(100, 100, 735, 600);
 
-        JScrollPane stuManagePanel = new JScrollPane();
+        JScrollPane stuGradeScrollPane = new JScrollPane();
 
         JPanel searchPanel = new JPanel();
         searchPanel.setBorder(new TitledBorder(null, "搜索条件", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -146,7 +135,7 @@ public class StudentManageFrm extends JInternalFrame {
                         .addGroup(listGroupLayout.createSequentialGroup()
                                 .addGap(30)
                                 .addGroup(listGroupLayout.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(stuManagePanel, GroupLayout.PREFERRED_SIZE, 669, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(stuGradeScrollPane, GroupLayout.PREFERRED_SIZE, 669, GroupLayout.PREFERRED_SIZE)
                                         .addGroup(listGroupLayout.createParallelGroup(Alignment.TRAILING)
                                                 .addComponent(formPanel, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                                 .addComponent(searchPanel, Alignment.LEADING, GroupLayout.PREFERRED_SIZE, 672, GroupLayout.PREFERRED_SIZE)))
@@ -158,7 +147,7 @@ public class StudentManageFrm extends JInternalFrame {
                                 .addGap(18)
                                 .addComponent(searchPanel, GroupLayout.PREFERRED_SIZE, 87, GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(ComponentPlacement.UNRELATED)
-                                .addComponent(stuManagePanel, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(stuGradeScrollPane, GroupLayout.PREFERRED_SIZE, 128, GroupLayout.PREFERRED_SIZE)
                                 .addGap(18)
                                 .addComponent(formPanel, GroupLayout.PREFERRED_SIZE, 275, GroupLayout.PREFERRED_SIZE)
                                 .addContainerGap(25, Short.MAX_VALUE))
@@ -171,135 +160,119 @@ public class StudentManageFrm extends JInternalFrame {
 
         JLabel stuNameJbl = new JLabel("学生姓名：");
         stuNameTxt = new JTextField();
+        stuNameTxt.setEditable(false);
         stuNameTxt.setColumns(10);
 
-        JLabel stuSexJbl = new JLabel("学生性别：");
-        manJrb = new JRadioButton("男");
-        ButtonGroup stuSexButtonBtn = new ButtonGroup();
-        stuSexButtonBtn.add(manJrb);
-        manJrb.setSelected(true);
-        femaleJrb = new JRadioButton("女");
-        stuSexButtonBtn.add(femaleJrb);
+        JLabel chineseScoreJbl = new JLabel("语文成绩：");
+        chineseScoreText = new JTextField();
+        chineseScoreText.setColumns(10);
 
-        JLabel stuGradeJbl = new JLabel("成绩：");
-        stuGradeTxt = new JTextField();
-        stuGradeTxt.setColumns(10);
+        JLabel mathScoreJbl = new JLabel("数学成绩：");
+        mathScoreText = new JTextField();
+        mathScoreText.setColumns(10);
 
-        JLabel homeAddressJbl = new JLabel("家庭住址：");
-        homeAddressTxt = new JTextField();
-        homeAddressTxt.setColumns(10);
+        JLabel englishScore = new JLabel("英语成绩：");
+        englishScoreText = new JTextField();
+        englishScoreText.setColumns(10);
 
         JLabel stuClassJbl = new JLabel("学生班级：");
         stuClassJcb = new JComboBox<>();
-
-        JLabel stuDescJbl = new JLabel("学生描述：");
-        stuDescTxt = new JTextArea();
+        stuClassJcb.setEditable(false);
 
         JButton reviseButton = new JButton("修改");
-        reviseButton.addActionListener(this::bookUpdateActionPerformed);
+        reviseButton.addActionListener(this::stuGradeUpdateActionPerformed);
         reviseButton.setIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/icon/edit.png"))));
 
         JButton deleteButton = new JButton("删除");
-        deleteButton.addActionListener(this::studentDeleteActionPerformed);
+        deleteButton.addActionListener(this::stuGradeDeleteActionPerformed);
         deleteButton.setIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/icon/delete.png"))));
 
-        GroupLayout stuManagePanelLayout = new GroupLayout(formPanel);
-        stuManagePanelLayout.setHorizontalGroup(
-                stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(stuManagePanelLayout.createSequentialGroup()
+        GroupLayout stuInfoList = new GroupLayout(formPanel);
+
+        stuInfoList.setHorizontalGroup(
+                stuInfoList.createParallelGroup(Alignment.LEADING)
+                        .addGroup(stuInfoList.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(schoolDegreeJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(schoolDegreeTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(stuGradeJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(stuGradeTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
-                                                                .addGap(31)
-                                                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING, false)
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(stuNameJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(stuNameTxt, GroupLayout.PREFERRED_SIZE, 115, GroupLayout.PREFERRED_SIZE))
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(homeAddressJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(homeAddressTxt)))
-                                                                .addGap(18)
-                                                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING, false)
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(stuSexJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(manJrb)
-                                                                                .addPreferredGap(ComponentPlacement.UNRELATED)
-                                                                                .addComponent(femaleJrb))
-                                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                                .addComponent(stuClassJbl)
-                                                                                .addPreferredGap(ComponentPlacement.RELATED)
-                                                                                .addComponent(stuClassJcb, 0, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
-                                                                .addComponent(stuDescJbl)
+                                .addGroup(stuInfoList.createParallelGroup(Alignment.LEADING)
+                                        .addGroup(stuInfoList.createSequentialGroup()
+                                                .addGap(18)
+                                                .addComponent(schoolDegreeJbl)
+                                                .addPreferredGap(ComponentPlacement.UNRELATED)
+                                                .addComponent(schoolDegreeTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(ComponentPlacement.UNRELATED)
+                                                .addComponent(stuNameJbl)
+                                                .addPreferredGap(ComponentPlacement.RELATED)
+                                                .addComponent(stuNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                .addPreferredGap(ComponentPlacement.UNRELATED)
+                                                .addGap(18)
+                                                .addComponent(stuClassJbl)
+                                                .addPreferredGap(ComponentPlacement.RELATED)
+                                                .addComponent(stuClassJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                        .addGroup(stuInfoList.createSequentialGroup()
+                                                .addGroup(stuInfoList.createParallelGroup(Alignment.LEADING)
+                                                        .addGroup(stuInfoList.createSequentialGroup()
+                                                                .addComponent(chineseScoreJbl)
                                                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                                                .addComponent(stuDescTxt)))
-                                                .addContainerGap(95, Short.MAX_VALUE))
-                                        .addGroup(stuManagePanelLayout.createSequentialGroup()
+                                                                .addComponent(chineseScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18)
+                                                                .addComponent(mathScoreJbl)
+                                                                .addPreferredGap(ComponentPlacement.RELATED)
+                                                                .addComponent(mathScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                                                .addGap(18)
+                                                                .addComponent(englishScore)
+                                                                .addPreferredGap(ComponentPlacement.RELATED)
+                                                                .addComponent(englishScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                                )
+                                                .addGap(0, 0, Short.MAX_VALUE))
+                                        .addGroup(stuInfoList.createSequentialGroup()
                                                 .addComponent(reviseButton)
-                                                .addGap(40)
-                                                .addComponent(deleteButton)
-                                                .addContainerGap())))
+                                                .addPreferredGap(ComponentPlacement.UNRELATED)
+                                                .addComponent(deleteButton)))
+                                .addContainerGap(95, Short.MAX_VALUE))
         );
-        stuManagePanelLayout.setVerticalGroup(
-                stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                        .addGroup(stuManagePanelLayout.createSequentialGroup()
+
+        stuInfoList.setVerticalGroup(
+                stuInfoList.createParallelGroup(Alignment.LEADING)
+                        .addGroup(stuInfoList.createSequentialGroup()
                                 .addContainerGap()
-                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.BASELINE)
+                                .addGroup(stuInfoList.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(schoolDegreeJbl)
                                         .addComponent(schoolDegreeTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(stuNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(stuNameJbl)
-                                        .addComponent(stuSexJbl)
-                                        .addComponent(manJrb)
-                                        .addComponent(femaleJrb))
-                                .addGap(18)
-                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.BASELINE)
-                                        .addComponent(stuGradeJbl)
-                                        .addComponent(stuGradeTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
-                                        .addComponent(homeAddressJbl)
-                                        .addComponent(homeAddressTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(stuNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
                                         .addComponent(stuClassJbl)
                                         .addComponent(stuClassJcb, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                 .addGap(18)
-                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.LEADING)
-                                        .addComponent(stuDescJbl)
-                                        .addComponent(stuDescTxt, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(ComponentPlacement.RELATED, 21, Short.MAX_VALUE)
-                                .addGroup(stuManagePanelLayout.createParallelGroup(Alignment.BASELINE)
+                                .addGroup(stuInfoList.createParallelGroup(Alignment.BASELINE)
+                                        .addComponent(mathScoreJbl)
+                                        .addComponent(mathScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(chineseScoreJbl)
+                                        .addComponent(chineseScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(englishScore)
+                                        .addComponent(englishScoreText, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                .addGap(18)
+                                .addGroup(stuInfoList.createParallelGroup(Alignment.BASELINE)
                                         .addComponent(reviseButton)
                                         .addComponent(deleteButton))
-                                .addContainerGap())
+                                .addContainerGap(25, Short.MAX_VALUE))
         );
-        formPanel.setLayout(stuManagePanelLayout);
+
+        formPanel.setLayout(stuInfoList);
 
         JLabel searchStuNameJbl = new JLabel("学生姓名：");
         searchStudentNameTxt = new JTextField();
         searchStudentNameTxt.setColumns(10);
 
-        JLabel searchHomeAddressJbl = new JLabel("家庭住址：");
+        JLabel searchSchoolDegreeJbl = new JLabel("学号：");
 
-        searchHomeAddressTxt = new JTextField();
-        searchHomeAddressTxt.setColumns(10);
+        searchNumberTxt = new JTextField();
+        searchNumberTxt.setColumns(10);
 
         JLabel searchStudentClassJbl = new JLabel("学生班级：");
         searchStudentClassJcb = new JComboBox<>();
 
         JButton inquireBtn = new JButton("查询");
-        inquireBtn.addActionListener(this::stuSearchActionPerformed);
+        inquireBtn.addActionListener(this::stuGradeSearchActionPerformed);
         inquireBtn.setIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif"))));
 
         GroupLayout formGroupLayout = new GroupLayout(searchPanel);
@@ -310,9 +283,9 @@ public class StudentManageFrm extends JInternalFrame {
                                 .addPreferredGap(ComponentPlacement.RELATED)
                                 .addComponent(searchStudentNameTxt, GroupLayout.PREFERRED_SIZE, 97, GroupLayout.PREFERRED_SIZE)
                                 .addGap(15)
-                                .addComponent(searchHomeAddressJbl)
+                                .addComponent(searchSchoolDegreeJbl)
                                 .addPreferredGap(ComponentPlacement.RELATED)
-                                .addComponent(searchHomeAddressTxt, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)
+                                .addComponent(searchNumberTxt, GroupLayout.PREFERRED_SIZE, 88, GroupLayout.PREFERRED_SIZE)
                                 .addGap(15)
                                 .addComponent(searchStudentClassJbl)
                                 .addPreferredGap(ComponentPlacement.RELATED)
@@ -332,10 +305,10 @@ public class StudentManageFrm extends JInternalFrame {
                                                         .addComponent(searchStudentNameTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)))
                                         .addGroup(formGroupLayout.createSequentialGroup()
                                                 .addGap(16)
-                                                .addComponent(searchHomeAddressJbl))
+                                                .addComponent(searchSchoolDegreeJbl))
                                         .addGroup(formGroupLayout.createSequentialGroup()
                                                 .addGap(14)
-                                                .addComponent(searchHomeAddressTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
+                                                .addComponent(searchNumberTxt, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE))
                                         .addGroup(formGroupLayout.createSequentialGroup()
                                                 .addGap(18)
                                                 .addComponent(searchStudentClassJbl))
@@ -353,14 +326,14 @@ public class StudentManageFrm extends JInternalFrame {
         stuTable.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent met) {
-                studentTableMousePressed();
+                stuGradeTableMousePressed();
             }
         });
         stuTable.setModel(new DefaultTableModel(
                 new Object[][]{
                 },
                 new String[]{
-                        "学号", "姓名", "家庭住址", "性别", "成绩", "学生描述", "学生班级"
+                        "编号", "学号", "姓名", "学生班级", "语文成绩", "数学成绩", "英语成绩"
                 }
         ) {
             final boolean[] columnEditable = new boolean[]{
@@ -375,14 +348,12 @@ public class StudentManageFrm extends JInternalFrame {
         stuTable.getColumnModel().getColumn(2).setPreferredWidth(80);
         stuTable.getColumnModel().getColumn(5).setPreferredWidth(97);
         stuTable.getColumnModel().getColumn(6).setPreferredWidth(90);
-        stuManagePanel.setViewportView(stuTable);
+        stuGradeScrollPane.setViewportView(stuTable);
         getContentPane().setLayout(listGroupLayout);
 
-        stuDescTxt.setBorder(new LineBorder(new Color(127, 157, 185), 1, false));
-
-        this.fillStuClassJcb("search");
-        this.fillStuClassJcb("modify");
-        this.fillStuTable(new Student());
+        this.fillStudentClassJcb("search");
+        this.fillStudentClassJcb("modify");
+        this.fillStuGradeTable(new StuGrade());
 
     }
 
@@ -391,9 +362,9 @@ public class StudentManageFrm extends JInternalFrame {
      *
      * @param evt 事件
      */
-    private void studentDeleteActionPerformed(ActionEvent evt) {
-        String schoolDegree = schoolDegreeTxt.getText();
-        if (StringUtil.isEmpty(schoolDegree)) {
+    private void stuGradeDeleteActionPerformed(ActionEvent evt) {
+        String id = schoolDegreeTxt.getText();
+        if (StringUtil.isEmpty(id)) {
             JOptionPane.showMessageDialog(null, "请选择要删除的记录");
             return;
         }
@@ -402,11 +373,11 @@ public class StudentManageFrm extends JInternalFrame {
             Connection con = null;
             try {
                 con = dbUtil.getCon();
-                int deleteNum = studentDao.delete(con, schoolDegree);
+                int deleteNum = stuGradeDao.delete(con, id);
                 if (deleteNum == 1) {
                     JOptionPane.showConfirmDialog(null, "删除成功");
                     this.resetValue();
-                    this.fillStuTable(new Student());
+                    this.fillStuGradeTable(new StuGrade());
                 } else {
                     JOptionPane.showConfirmDialog(null, "删除失败");
                 }
@@ -429,34 +400,34 @@ public class StudentManageFrm extends JInternalFrame {
      *
      * @param evt 事件
      */
-    private void bookUpdateActionPerformed(ActionEvent evt) {
-        String id = this.schoolDegreeTxt.getText();
-        if (StringUtil.isEmpty(id)) {
+    private void stuGradeUpdateActionPerformed(ActionEvent evt) {
+        String schoolDegree = this.schoolDegreeTxt.getText();
+        if (StringUtil.isEmpty(schoolDegree)) {
             JOptionPane.showMessageDialog(null, "请选择要修改的记录");
             return;
         }
         String name = this.stuNameTxt.getText();
-        String home = this.homeAddressTxt.getText();
-        String score = this.stuGradeTxt.getText();
-        String stuDesc = this.stuDescTxt.getText();
+        String chineseScore = this.chineseScoreText.getText();
+        String mathScore = this.mathScoreText.getText();
+        String englishScore = this.englishScoreText.getText();
         if (StringUtil.isEmpty(name)) {
             JOptionPane.showMessageDialog(null, "学生姓名不能为空！");
             return;
         }
-        if (StringUtil.isEmpty(home)) {
-            JOptionPane.showMessageDialog(null, "家庭住址不能为空！");
-            return;
-        }
-        if (StringUtil.isEmpty(score)) {
+
+        if (StringUtil.isEmpty(chineseScore)) {
             JOptionPane.showMessageDialog(null, "学生成绩不能为空！");
             return;
         }
 
-        String sex = "";
-        if (manJrb.isSelected()) {
-            sex = "男";
-        } else if (femaleJrb.isSelected()) {
-            sex = "女";
+        if (StringUtil.isEmpty(mathScore)) {
+            JOptionPane.showMessageDialog(null, "学生成绩不能为空！");
+            return;
+        }
+
+        if (StringUtil.isEmpty(englishScore)) {
+            JOptionPane.showMessageDialog(null, "学生成绩不能为空！");
+            return;
         }
 
         StuClass stuClass = (StuClass) stuClassJcb.getSelectedItem();
@@ -465,16 +436,16 @@ public class StudentManageFrm extends JInternalFrame {
             stuClassId = stuClass.getId();
         }
 
-        Student student = new Student(Integer.parseInt(id), name, home, sex, Float.parseFloat(score), stuClassId, stuDesc);
+        StuGrade stuGrade = new StuGrade(stuClassId, name, Float.parseFloat(chineseScore), Float.parseFloat(mathScore), Float.parseFloat(englishScore));
 
         Connection con = null;
         try {
             con = dbUtil.getCon();
-            int addNum = studentDao.update(con, student);
+            int addNum = stuGradeDao.update(con, stuGrade);
             if (addNum == 1) {
                 JOptionPane.showMessageDialog(null, "学生修改成功！");
                 resetValue();
-                this.fillStuTable(new Student());
+                this.fillStuGradeTable(new StuGrade());
             } else {
                 JOptionPane.showMessageDialog(null, "学生修改失败！");
             }
@@ -497,10 +468,9 @@ public class StudentManageFrm extends JInternalFrame {
     private void resetValue() {
         this.schoolDegreeTxt.setText("");
         this.stuNameTxt.setText("");
-        this.homeAddressTxt.setText("");
-        this.stuGradeTxt.setText("");
-        this.manJrb.setSelected(true);
-        this.stuDescTxt.setText("");
+        this.chineseScoreText.setText("");
+        this.mathScoreText.setText("");
+        this.englishScoreText.setText("");
         if (this.stuClassJcb.getItemCount() > 0) {
             this.stuClassJcb.setSelectedIndex(0);
         }
@@ -509,20 +479,14 @@ public class StudentManageFrm extends JInternalFrame {
     /**
      * 表格行点击事件处理
      */
-    private void studentTableMousePressed() {
+    private void stuGradeTableMousePressed() {
         int row = this.stuTable.getSelectedRow();
-        this.schoolDegreeTxt.setText((String) stuTable.getValueAt(row, 0));
-        this.stuNameTxt.setText((String) stuTable.getValueAt(row, 1));
-        this.homeAddressTxt.setText((String) stuTable.getValueAt(row, 2));
-        String sex = (String) stuTable.getValueAt(row, 3);
-        if ("男".equals(sex)) {
-            this.manJrb.setSelected(true);
-        } else if ("女".equals(sex)) {
-            this.femaleJrb.setSelected(true);
-        }
-        this.stuGradeTxt.setText(stuTable.getValueAt(row, 4) + "");
-        this.stuDescTxt.setText((String) stuTable.getValueAt(row, 5));
-        String stuClassName = (String) this.stuTable.getValueAt(row, 6);
+        this.schoolDegreeTxt.setText((String) stuTable.getValueAt(row, 1));
+        this.stuNameTxt.setText((String) stuTable.getValueAt(row, 2));
+        this.chineseScoreText.setText(String.valueOf(stuTable.getValueAt(row, 4)));
+        this.mathScoreText.setText(String.valueOf(stuTable.getValueAt(row, 5)));
+        this.englishScoreText.setText(String.valueOf(stuTable.getValueAt(row, 6)));
+        String stuClassName = (String) this.stuTable.getValueAt(row, 3);
         this.stuClassJcb.getItemCount();
         int n = this.stuClassJcb.getItemCount();
         for (int i = 0; i < n; i++) {
@@ -538,24 +502,28 @@ public class StudentManageFrm extends JInternalFrame {
      *
      * @param evt 事件
      */
-    private void stuSearchActionPerformed(ActionEvent evt) {
+    private void stuGradeSearchActionPerformed(ActionEvent evt) {
         String name = this.searchStudentNameTxt.getText();
-        String home = this.searchHomeAddressTxt.getText();
+        String numberStr = this.searchNumberTxt.getText();
+        if (numberStr == null || numberStr.trim().isEmpty()) {
+            return;
+        }
+        int number = Integer.parseInt(numberStr);
+
         StuClass stuClass = (StuClass) this.searchStudentClassJcb.getSelectedItem();
         int stuClassId = 0;
         if (stuClass != null) {
             stuClassId = stuClass.getId();
         }
 
-        Student student = new Student(name, home, stuClassId);
-        this.fillStuTable(student);
-
+        StuGrade stuGrade = new StuGrade(name, number, stuClassId);
+        this.fillStuGradeTable(stuGrade);
     }
 
     /**
      * 初始化下拉框
      */
-    private void fillStuClassJcb(String type) {
+    private void fillStudentClassJcb(String type) {
         Connection con = null;
         StuClass stuClassName;
         try {
@@ -591,24 +559,24 @@ public class StudentManageFrm extends JInternalFrame {
     /**
      * 初始化表格数据
      *
-     * @param student 学生
+     * @param stuGrade 数据
      */
-    private void fillStuTable(Student student) {
+    private void fillStuGradeTable(StuGrade stuGrade) {
         DefaultTableModel dtm = (DefaultTableModel) stuTable.getModel();
         dtm.setRowCount(0);
         Connection con = null;
         try {
             con = dbUtil.getCon();
-            ResultSet rs = studentDao.list(con, student);
+            ResultSet rs = stuGradeDao.list(con, stuGrade);
             while (rs.next()) {
                 Vector<Object> v = new Vector<>();
                 v.add(rs.getString("id"));
+                v.add(rs.getString("id"));
                 v.add(rs.getString("name"));
-                v.add(rs.getString("home"));
-                v.add(rs.getString("sex"));
-                v.add(rs.getFloat("score"));
-                v.add(rs.getString("stuDesc"));
                 v.add(rs.getString("stuClassName"));
+                v.add(rs.getFloat("chinese_score"));
+                v.add(rs.getFloat("math_score"));
+                v.add(rs.getFloat("english_score"));
                 dtm.addRow(v);
             }
         } catch (Exception e) {

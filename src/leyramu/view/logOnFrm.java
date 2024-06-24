@@ -1,9 +1,9 @@
-package com.view;
+package leyramu.view;
 
-import com.dao.UserDao;
-import com.model.User;
-import com.util.DbUtil;
-import com.util.StringUtil;
+import leyramu.dao.UserDao;
+import leyramu.model.User;
+import leyramu.util.DbUtil;
+import leyramu.util.StringUtil;
 
 import javax.swing.*;
 import javax.swing.GroupLayout.Alignment;

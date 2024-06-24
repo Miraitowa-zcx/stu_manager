@@ -1,7 +1,7 @@
-package com.dao;
+package leyramu.dao;
 
-import com.model.StuClass;
-import com.util.StringUtil;
+import leyramu.model.StuClass;
+import leyramu.util.StringUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,4 +1,4 @@
-package com.model;
+package leyramu.model;
 
 import lombok.Getter;
 import lombok.Setter;
