@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第六次提交">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第七次提交">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +168,7 @@
       <workItem from="1716811290135" duration="2204000" />
       <workItem from="1716854291548" duration="9000" />
       <workItem from="1719224677155" duration="2863000" />
-      <workItem from="1719227824612" duration="150000" />
+      <workItem from="1719227824612" duration="590000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -218,7 +218,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719227278140</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="第七次提交">
+      <option name="closed" value="true" />
+      <created>1719228011171</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719228011171</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +250,7 @@
     <MESSAGE value="第四次提交" />
     <MESSAGE value="第五次提交" />
     <MESSAGE value="第六次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第六次提交" />
+    <MESSAGE value="第七次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第七次提交" />
   </component>
 </project>
