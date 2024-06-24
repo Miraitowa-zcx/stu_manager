@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第五次提交">
-      <change beforePath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" afterDir="false" />
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第六次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,9 +89,22 @@
       <recent name="com.model" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.logOnFrm">
     <configuration name="MainFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="leyramu.view.MainFrm" />
+      <module name="StuManager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="leyramu.view.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="logOnFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leyramu.view.logOnFrm" />
       <module name="StuManager" />
       <extension name="coverage">
         <pattern>
@@ -116,6 +129,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.logOnFrm" />
         <item itemvalue="应用程序.MainFrm" />
       </list>
     </recent_temporary>
@@ -153,7 +167,8 @@
       <workItem from="1715229179355" duration="5682000" />
       <workItem from="1716811290135" duration="2204000" />
       <workItem from="1716854291548" duration="9000" />
-      <workItem from="1719224677155" duration="2315000" />
+      <workItem from="1719224677155" duration="2863000" />
+      <workItem from="1719227824612" duration="150000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -195,7 +210,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719227235642</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="第六次提交">
+      <option name="closed" value="true" />
+      <created>1719227278140</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719227278140</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -218,6 +241,7 @@
     <MESSAGE value="第三次提交" />
     <MESSAGE value="第四次提交" />
     <MESSAGE value="第五次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第五次提交" />
+    <MESSAGE value="第六次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第六次提交" />
   </component>
 </project>
