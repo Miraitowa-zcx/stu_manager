@@ -41,7 +41,7 @@ public class DbUtil {
         Class.forName(jdbcName);
         String dbUserName = "root";
         String dbUrl = "jdbc:mysql://localhost:3306/stu_manger?useUnicode=true&characterEncoding=utf8&useSSL=false";
-        String dbPassword = "Zcx3701812004/";
+        String dbPassword = "root";
         return DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
     }
 

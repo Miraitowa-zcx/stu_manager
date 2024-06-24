@@ -4,30 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第三次提交">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/StuClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/dao/StuClassDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/StuGradeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/dao/StuGradeDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/StuClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/model/StuClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/StuGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/model/StuGrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/util/StringUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/util/StringUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/AboutAuthorFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/AboutAuthorFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/MainFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/MainFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuClassAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuClassManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuGradeAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuGradeManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StudentAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StudentAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StudentManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StudentManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/logOnFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/logOnFrm.java" afterDir="false" />
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第五次提交">
+      <change beforePath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +153,7 @@
       <workItem from="1715229179355" duration="5682000" />
       <workItem from="1716811290135" duration="2204000" />
       <workItem from="1716854291548" duration="9000" />
-      <workItem from="1719224677155" duration="2120000" />
+      <workItem from="1719224677155" duration="2315000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -201,7 +179,23 @@
       <option name="project" value="LOCAL" />
       <updated>1719225803213</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="第四次提交">
+      <option name="closed" value="true" />
+      <created>1719227082720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719227082720</updated>
+    </task>
+    <task id="LOCAL-00005" summary="第五次提交">
+      <option name="closed" value="true" />
+      <created>1719227235642</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719227235642</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +216,8 @@
     <MESSAGE value="第一次提交" />
     <MESSAGE value="第二次提交" />
     <MESSAGE value="第三次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第三次提交" />
+    <MESSAGE value="第四次提交" />
+    <MESSAGE value="第五次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第五次提交" />
   </component>
 </project>
