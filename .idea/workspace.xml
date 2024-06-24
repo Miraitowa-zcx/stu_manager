@@ -4,24 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第一次提交">
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第二次提交">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/StuClassDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/StuClassDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/StudentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/StudentDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/StuClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StuClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/StuGrade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/StuGrade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/AboutAuthorFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/AboutAuthorFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/MainFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/MainFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuClassAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuClassManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuGradeAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StuGradeManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StuGradeManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StudentAddFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StudentAddFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/StudentManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/StudentManageFrm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/view/logOnFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/view/logOnFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/photo/author.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/photo/photo/author.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photo/photo/bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/photo/photo/bg.jpg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,8 +140,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
       </set>
     </attachedChunks>
   </component>
@@ -180,7 +167,10 @@
       <workItem from="1715084918988" duration="1727000" />
       <workItem from="1715143981586" duration="9364000" />
       <workItem from="1715173491991" duration="360000" />
-      <workItem from="1715229179355" duration="2265000" />
+      <workItem from="1715229179355" duration="5682000" />
+      <workItem from="1716811290135" duration="2204000" />
+      <workItem from="1716854291548" duration="9000" />
+      <workItem from="1719224677155" duration="1086000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -190,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715173779293</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="第二次提交">
+      <option name="closed" value="true" />
+      <created>1715231731794</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715231731794</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -209,6 +207,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="第一次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第一次提交" />
+    <MESSAGE value="第二次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第二次提交" />
   </component>
 </project>
