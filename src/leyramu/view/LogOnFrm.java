@@ -18,7 +18,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.sql.Connection;
-import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.Objects;
 
@@ -248,15 +247,20 @@ public class LogOnFrm extends JFrame {
         }
     }
 
+    /**
+     * 获取配置文件内容
+     *
+     * @return 配置文件内容
+     */
     private static StringBuilder getStringBuilder() {
         StringBuilder contentBuilder = new StringBuilder();
-        contentBuilder.append("数据库驱动\n");
+        contentBuilder.append("# 数据库驱动\n");
         contentBuilder.append("db.driver=com.mysql.cj.jdbc.Driver\n");
-        contentBuilder.append("数据库连接URI\n");
+        contentBuilder.append("# 数据库连接URI\n");
         contentBuilder.append("db.url=jdbc:mysql://localhost:3306/stu_manager?useUnicode=true&characterEncoding=utf8&useSSL=true\n");
-        contentBuilder.append("数据库用户名\n");
+        contentBuilder.append("# 数据库用户名\n");
         contentBuilder.append("db.username=root\n");
-        contentBuilder.append("数据库密码\n");
+        contentBuilder.append("# 数据库密码\n");
         contentBuilder.append("db.password=root\n");
         return contentBuilder;
     }
