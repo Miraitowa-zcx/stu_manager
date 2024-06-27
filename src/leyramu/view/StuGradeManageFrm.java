@@ -273,7 +273,7 @@ public class StuGradeManageFrm extends JInternalFrame {
 
         JButton inquireBtn = new JButton("查询");
         inquireBtn.addActionListener(this::stuGradeSearchActionPerformed);
-        inquireBtn.setIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/javax/swing/plaf/metal/icons/ocean/computer.gif"))));
+        inquireBtn.setIcon(new ImageIcon(Objects.requireNonNull(StudentManageFrm.class.getResource("/icon/computer.gif"))));
 
         GroupLayout formGroupLayout = new GroupLayout(searchPanel);
         formGroupLayout.setHorizontalGroup(

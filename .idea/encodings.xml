@@ -9,12 +9,11 @@
     <file url="file://$PROJECT_DIR$/src/leyramu/model/Student.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/model/User.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/util/StringUtil.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/leyramu/util/StringUtil.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/leyramu/view/LogOnFrm.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/view/MainFrm.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/view/StuClassAddFrm.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/view/StuClassManageFrm.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/view/StudentAddFrm.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/leyramu/view/StudentManageFrm.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/leyramu/view/logOnFrm.java" charset="UTF-8" />
   </component>
 </project>

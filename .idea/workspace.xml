@@ -1,16 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="StuManagerOS-1.0.0" />
+    </artifacts-to-build>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第七次提交">
+    <list default="true" id="0790f115-c2bf-4d10-9929-e3f352f78e57" name="更改" comment="第八次提交">
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/StuManagerOS_1_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/stu_manger.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/stu_manager.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/util/DbUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leyramu/view/StuClassManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuClassManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leyramu/view/StuGradeManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StuGradeManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leyramu/view/StudentManageFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/StudentManageFrm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/leyramu/view/logOnFrm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/leyramu/view/LogOnFrm.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -27,6 +45,9 @@
     &quot;accountId&quot;: &quot;c2bef184-c74b-4ba1-8e3c-a38cc4a25845&quot;
   }
 }</component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 3
@@ -37,43 +58,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.logOnFrm.executor&quot;: &quot;Run&quot;,
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;true&quot;,
-    &quot;JAR 应用程序.lombok-1.18.30.jar.executor&quot;: &quot;Run&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;stu__manager&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/CodesProject/Java/stu-manager&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;应用程序.JavaFrm.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.MainFrm.executor&quot;: &quot;Run&quot;,
-    &quot;应用程序.logOnFrm.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.logOnFrm.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "true",
+    "JAR 应用程序.lombok-1.18.30.jar.executor": "Run",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "stu__manager",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/CodesProject/Java/stu-manager/src/leyramu",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "工件",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true",
+    "应用程序.JavaFrm.executor": "Run",
+    "应用程序.LogOnFrm.executor": "Run",
+    "应用程序.MainFrm.executor": "Run",
+    "应用程序.logOnFrm.executor": "Run"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\CodesProject\Java\stu-manager\src\leyramu" />
+      <recent name="D:\CodesProject\Java\stu-manager\bin\leyramu\view" />
+      <recent name="D:\CodesProject\Java\stu-manager\icon\icon" />
+      <recent name="D:\CodesProject\Java\stu-manager\lib" />
       <recent name="D:\CodesProject\Java\stu-manager" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -89,9 +119,9 @@
       <recent name="com.model" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.logOnFrm">
-    <configuration name="MainFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leyramu.view.MainFrm" />
+  <component name="RunManager" selected="应用程序.LogOnFrm">
+    <configuration name="LogOnFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leyramu.view.LogOnFrm" />
       <module name="StuManager" />
       <extension name="coverage">
         <pattern>
@@ -103,8 +133,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="logOnFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="leyramu.view.logOnFrm" />
+    <configuration name="MainFrm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="leyramu.view.MainFrm" />
       <module name="StuManager" />
       <extension name="coverage">
         <pattern>
@@ -129,7 +159,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.logOnFrm" />
+        <item itemvalue="应用程序.LogOnFrm" />
         <item itemvalue="应用程序.MainFrm" />
       </list>
     </recent_temporary>
@@ -168,7 +198,9 @@
       <workItem from="1716811290135" duration="2204000" />
       <workItem from="1716854291548" duration="9000" />
       <workItem from="1719224677155" duration="2863000" />
-      <workItem from="1719227824612" duration="590000" />
+      <workItem from="1719227824612" duration="987000" />
+      <workItem from="1719410060779" duration="846000" />
+      <workItem from="1719452692070" duration="4601000" />
     </task>
     <task id="LOCAL-00001" summary="第一次提交">
       <option name="closed" value="true" />
@@ -226,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719228011171</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="第八次提交">
+      <option name="closed" value="true" />
+      <created>1719228429263</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719228429263</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +291,7 @@
     <MESSAGE value="第五次提交" />
     <MESSAGE value="第六次提交" />
     <MESSAGE value="第七次提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="第七次提交" />
+    <MESSAGE value="第八次提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="第八次提交" />
   </component>
 </project>

@@ -7,7 +7,8 @@
 ## 2. 运行
 
 1. 运行前请先安装好学生成绩管理系统的依赖库。
-2. Java 后端 Demo 运行使用 Java-17.0.8 测试通过
+2. Java Swing Demo 运行使用 Java-17.0.8 测试通过
+3. 使用先启动数据库，导入数据库，并配置config下的db文件配置数据库，然后运行exe。
 
 ## 3. 框架结构树
 
@@ -15,6 +16,8 @@
 stu-manager    学生成绩管理系统
 ├─.idea    IDEA 配置文件
 ├─bin    bin 目录
+├─classes    编译后的类文件
+├─config    配置文件
 ├─icon    图标
 ├─lib    依赖库
 ├─photo   图片

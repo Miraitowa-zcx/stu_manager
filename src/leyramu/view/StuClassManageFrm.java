@@ -106,7 +106,7 @@ public class StuClassManageFrm extends JInternalFrame {
 
         JButton searchStuClassNameBtn = new JButton("查询");
         searchStuClassNameBtn.addActionListener(this::stuClassSearchActionPerformed);
-        searchStuClassNameBtn.setIcon(new ImageIcon(Objects.requireNonNull(StuClassManageFrm.class.getResource("/javax/swing/plaf/metal/icons/ocean/newFolder.gif"))));
+        searchStuClassNameBtn.setIcon(new ImageIcon(Objects.requireNonNull(StuClassManageFrm.class.getResource("/icon/newFolder.gif"))));
 
         JPanel stuClassFormPanel = new JPanel();
         stuClassFormPanel.setBorder(new TitledBorder(null, "表单操作", TitledBorder.LEADING, TitledBorder.TOP, null, null));
