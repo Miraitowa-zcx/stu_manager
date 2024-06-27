@@ -16,7 +16,6 @@
 stu-manager    学生成绩管理系统
 ├─.idea    IDEA 配置文件
 ├─bin    bin 目录
-├─classes    编译后的类文件
 ├─config    配置文件
 ├─icon    图标
 ├─lib    依赖库
