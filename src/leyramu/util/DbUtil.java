@@ -36,18 +36,7 @@ public class DbUtil {
 
     /**
      * 获取数据库连接
-     *
-     * @return void
-     * @throws Exception 异常
      */
-//    public Connection getCon() throws Exception {
-//        String jdbcName = "com.mysql.cj.jdbc.Driver";
-//        Class.forName(jdbcName);
-//        String dbUserName = "root";
-//        String dbUrl = "jdbc:mysql://localhost:3306/stu_manger?useUnicode=true&characterEncoding=utf8&useSSL=false";
-//        String dbPassword = "root";
-//        return DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
-//    }
     public Connection getCon() throws IOException, SQLException, ClassNotFoundException {
 
         String configFilePath = "./config/db.properties";
@@ -68,7 +57,6 @@ public class DbUtil {
         Class.forName(jdbcName);
         return DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
     }
-
 
     /**
      * 关闭数据库连接
